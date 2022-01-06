@@ -1,0 +1,61 @@
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+  "username": "test@003",
+  "password": "123",
+  "name": {
+    "first": "Long",
+    "last": "Mai"
+  },
+  "information": {
+    "gender": "male"
+  }
+}
+
+###
+
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "username": "test@001",
+  "password": "123"
+}
+
+###
+
+GET http://localhost:5000/api/categories
+
+###
+
+GET http://localhost:5000/api/categories
+
+###
+
+POST http://localhost:5000/api/categories
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWQ2NzZhZGZmNmE0ZDIxZWUxOGQxMTciLCJpYXQiOjE2NDE0NDUwMzd9.3n6AXvhk9NOh9Sp4hpaVDR2bYPs7lUoDqQLwFiMsoQM
+
+{
+  "name": "Bàn phím"
+}
+
+###
+
+PUT http://localhost:5000/api/categories/61d676d2ff6a4d21ee18d11c
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWQ1YTU1MGIzM2I0NDI0OWNmYmYyMmYiLCJpYXQiOjE2NDE0NDc3ODd9.mmFzVRQVPFlO3FoBODF86cE5KzjhyjRi1EYJ74-1CPU
+
+{
+  "name": "Bàn phím đã sửa"
+}
+
+###
+
+DELETE http://localhost:5000/api/categories/61d675b93f940129b6b84db8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWQ1YTU1MGIzM2I0NDI0OWNmYmYyMmYiLCJpYXQiOjE2NDE0NDc3ODd9.mmFzVRQVPFlO3FoBODF86cE5KzjhyjRi1EYJ74-1CPU
+
+###
+
+GET http://localhost:5000/images/code.png
